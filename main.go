@@ -54,42 +54,34 @@ func (g *Game) Update() error {
 			for j := 0; j < 32; j++ {
 				liveCount := 0
 				if i-1 >= 0 && j-1 >= 0 && gameState[i-1][j-1] {
-					fmt.Println("NW")
 					liveCount++
 				}
 
 				if j-1 >= 0 && gameState[i][j-1] {
-					fmt.Println("N")
 					liveCount++
 				}
 
 				if i+1 < 32 && j-1 >= 0 && gameState[i+1][j-1] {
-					fmt.Println("NE")
 					liveCount++
 				}
 
 				if i+1 < 32 && gameState[i+1][j] {
-					fmt.Println("E")
 					liveCount++
 				}
 
 				if i+1 < 32 && j+1 < 32 && gameState[i+1][j+1] {
-					fmt.Println("SE")
 					liveCount++
 				}
 
 				if j+1 < 32 && gameState[i][j+1] {
-					fmt.Println("S")
 					liveCount++
 				}
 
 				if i-1 >= 0 && j+1 < 32 && gameState[i-1][j+1] {
-					fmt.Println("SW")
 					liveCount++
 				}
 
 				if i-1 >= 0 && gameState[i-1][j] {
-					fmt.Println("W")
 					liveCount++
 				}
 
